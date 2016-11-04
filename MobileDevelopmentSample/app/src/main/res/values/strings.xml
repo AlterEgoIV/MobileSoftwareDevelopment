@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MobileDevelopmentSample</string>
+    <string name="email_label">Email: </string>
+    <string name="phone_label">Phone: </string>
+</resources>
