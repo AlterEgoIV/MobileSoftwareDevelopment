@@ -12,5 +12,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:padding="8dp"
         android:id="@+id/sections_list" />
 </RelativeLayout>
