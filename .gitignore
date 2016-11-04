@@ -34,7 +34,7 @@ captures/
 
 # Intellij
 *.iml
-/MobileDevelopmentSample/.idea/
+.idea/
 
 # Keystore files
 *.jks
