@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ListsApp</string>
+
+    <string-array name="names">
+        <item>John</item>
+        <item>Jack</item>
+        <item>Jill</item>
+    </string-array>
+    
+    <string-array name="colours">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Return</item>
+    </string-array>
+</resources>
