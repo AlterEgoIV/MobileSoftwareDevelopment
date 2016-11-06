@@ -28,8 +28,7 @@ public class ContactListActivity extends ListActivity {
         contacts.add(new Contact("Mark", "mark@gmail.com", "087 123 4567", 23, "1325467"));
         contacts.add(new Contact("Mary", "mary@gmail.com", "087 123 4567", 22, "3217654"));
 
-        ListView contactsList = (ListView) findViewById(android.R.id.list);
-        contactsList.setAdapter(new ContactAdapter(this, contacts));
+        setListAdapter(new ContactAdapter(this, contacts));
     }
 
     @Override
