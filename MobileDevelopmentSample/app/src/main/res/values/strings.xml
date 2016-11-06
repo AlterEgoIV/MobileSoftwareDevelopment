@@ -2,4 +2,6 @@
     <string name="app_name">MobileDevelopmentSample</string>
     <string name="email_label">Email: </string>
     <string name="phone_label">Phone: </string>
+    <string name="age_label">Age: </string>
+    <string name="home_phone_label">Home Phone: </string>
 </resources>

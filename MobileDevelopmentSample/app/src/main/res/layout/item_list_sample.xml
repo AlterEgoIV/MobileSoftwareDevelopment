@@ -52,4 +52,44 @@
             android:layout_height="wrap_content"
             android:id="@+id/contactEmail" />
     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ageContainer">
+
+        <TextView
+            android:text="@string/age_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ageLabel"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contactAge"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homePhoneContainer">
+
+        <TextView
+            android:text="@string/home_phone_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homePhoneLabel"
+            android:layout_marginRight="16dp" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contactHomePhone"/>
+    </LinearLayout>
 </LinearLayout>

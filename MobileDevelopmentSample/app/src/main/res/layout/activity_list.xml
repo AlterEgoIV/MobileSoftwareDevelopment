@@ -4,13 +4,11 @@
     android:id="@+id/activity_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ie.theglassboard.mobiledevelopmentsample.list.ListActivity">
+    tools:context="ie.theglassboard.mobiledevelopmentsample.list.ContactListActivity">
 
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/contactsList" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ListView>
 </RelativeLayout>

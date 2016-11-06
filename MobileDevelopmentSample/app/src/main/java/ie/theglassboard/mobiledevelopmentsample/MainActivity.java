@@ -1,5 +1,6 @@
 package ie.theglassboard.mobiledevelopmentsample;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,9 +9,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import ie.theglassboard.mobiledevelopmentsample.list.ListActivity;
+import ie.theglassboard.mobiledevelopmentsample.list.ContactListActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ListActivity {
 
     private String[] sections = {"List"};
 
@@ -20,23 +21,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Get the sections view
-        ListView sectionsList = (ListView) findViewById(R.id.sections_list);
+        //ListView sectionsList = (ListView) findViewById(R.id.sections_list);
 
         // Pass the sections array to the list with the built in list item layout
-        sectionsList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, sections));
+        setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, sections));
+    }
 
-        // Launch the correct activity based on which item is clicked
-        sectionsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (sections[position]) {
-                    case "List":
-                        startActivity(new Intent(MainActivity.this, ListActivity.class));
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
+    // Launch the correct activity based on which item is clicked
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id)
+    {
+        switch (sections[position]) {
+            case "List":
+                startActivity(new Intent(MainActivity.this, ContactListActivity.class));
+                break;
+            default:
+                break;
+        }
     }
 }

@@ -18,10 +18,13 @@ import ie.theglassboard.mobiledevelopmentsample.R;
 
 public class ContactAdapter extends ArrayAdapter<Contact> {
 
+    // Static class can be called by owning class ContactAdapter
     private static class ViewHolder {
         TextView tvName;
         TextView tvEmail;
         TextView tvPhone;
+        TextView tvAge;
+        TextView tvHomePhone;
     }
 
     public ContactAdapter(Context context, ArrayList<Contact> contacts) {
@@ -44,6 +47,9 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
             viewHolder.tvName = (TextView)convertView.findViewById(R.id.contactName);
             viewHolder.tvEmail = (TextView)convertView.findViewById(R.id.contactEmail);
             viewHolder.tvPhone = (TextView)convertView.findViewById(R.id.contactPhone);
+            viewHolder.tvAge = (TextView)convertView.findViewById(R.id.contactAge);
+            viewHolder.tvHomePhone = (TextView)convertView.findViewById(R.id.contactHomePhone);
+
 
             convertView.setTag(viewHolder);
         } else {
@@ -53,6 +59,8 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
         viewHolder.tvName.setText(contact.getName());
         viewHolder.tvEmail.setText(contact.getEmail());
         viewHolder.tvPhone.setText(contact.getPhone());
+        viewHolder.tvAge.setText(contact.getAge());
+        viewHolder.tvHomePhone.setText(contact.getHomePhone());
 
         return convertView;
     }

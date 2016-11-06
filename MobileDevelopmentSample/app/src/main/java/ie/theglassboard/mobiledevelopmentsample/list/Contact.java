@@ -9,11 +9,15 @@ public class Contact {
     private String name;
     private String email;
     private String phone;
+    private int age;
+    private String homePhone;
 
-    public Contact(String name, String email, String phone) {
+    public Contact(String name, String email, String phone, int age, String homePhone) {
         this.name = name;
         this.email = email;
         this.phone = phone;
+        this.age = age;
+        this.homePhone = homePhone;
     }
 
     public String getName() {
@@ -27,4 +31,8 @@ public class Contact {
     public String getPhone() {
         return phone;
     }
+
+    public int getAge() { return age; }
+
+    public String getHomePhone() { return homePhone; }
 }
