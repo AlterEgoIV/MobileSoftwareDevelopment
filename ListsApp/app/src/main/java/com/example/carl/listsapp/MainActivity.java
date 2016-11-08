@@ -8,14 +8,24 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends ListActivity {
+
+    ArrayList<Icon>icons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names)));
+        icons = new ArrayList<Icon>();
+        icons.add(new Icon(R.mipmap.ic_launcher, "Icon"));
+        icons.add(new Icon(R.drawable.ok, "k"));
+
+        setListAdapter(new CustomAdapter(this, icons));
+        //setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names)));
     }
 
     @Override
